@@ -66,10 +66,7 @@ gem "aws-sdk-s3", require: false
 
 # favicon
 gem 'rails_real_favicon'
-
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'table_print'
 gem 'mailjet', :git => 'https://github.com/mailjet/mailjet-gem.git'
