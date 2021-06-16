@@ -5,20 +5,20 @@
     <nav class="navbar navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="150" height="48">
+         <img src="<%= asset_path( 'logo Handshake.png' ) %>" alt="IMG-LOGO" width="150" height="48"/>
       </a>
     </div>
   </nav>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link active" aria-current="page" href="#">Annonces</a>
           </li>
           <li class="nav-item">
-          <%= link_to "Contact", edit_user_registration_path, class:"nav-link active" %>
+          <%= link_to "Espace ressources", edit_user_registration_path, class:"nav-link active" %>
           </li>
           <li class="nav-item">
-          <%= link_to "Créer une annonce", edit_user_registration_path, class:"nav-link active"  %>
+          <%= link_to "Contact", edit_user_registration_path, class:"nav-link active"  %>
           </li>
           <li class="nav-item">
             <%= link_to "Sign out", destroy_user_session_path, class:"nav-link active", method: :delete %>
@@ -50,19 +50,19 @@
         <nav class="navbar navbar-light bg-secondary">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="150" height="48">
+            <img src="<%= asset_path( 'logo Handshake.png' ) %>" alt="IMG-LOGO" width="150" height="48"/>
           </a>
         </div>
       </nav>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                <a class="nav-link active" aria-current="page" href="#">Annonces</a>
               </li>
-              <%= link_to "Contact", edit_user_registration_path, class:"nav-link active" %>
+              <%= link_to "Espace ressources", edit_user_registration_path, class:"nav-link active" %>
           </li>
           <li class="nav-item">
-          <%= link_to "Créer une annonce", edit_user_registration_path, class:"nav-link active" %>
+          <%= link_to "Contact", edit_user_registration_path, class:"nav-link active" %>
           </li>
               <li class="nav-item">
                 <%= link_to "Se connecter", new_user_session_path, class:"nav-link active"%>
