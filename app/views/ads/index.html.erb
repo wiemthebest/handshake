@@ -1,0 +1,24 @@
+ <h1>Liste des annonces </h1>
+    <ul class="row">
+        <% @ads.all.each do |ad| %>
+            <% if is_validated?(ad.id) %>
+                <li class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= ad.title %>
+                            </h5>
+                            <p class="card-text text-truncate">
+                                <%= ad.description %>
+                            </p>
+                            <div class="card-text">
+                                <span class="text-muted">Date: </span>
+                                <%= ad.date %>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <% end %>
+        <% end %>
+    </ul>
+</div>
