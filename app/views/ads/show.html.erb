@@ -1,10 +1,10 @@
-<% content_for :title, "Event page "+@ad.title %>
+<% content_for :title, "Annonce page "@ad.title %>
 
 <!-- Junbotron User -->
 <div class="jumbotron">
   <h1 class="display-4"><%= @ad.title %></h1>
 </br></br>
-  <p class="display-4"><%= @ad.date.strftime("%h %d, %Y") %></p>
+  <p class="display-4"><%= @ad.date.strftime("%h, %d, %Y") %></p>
 </div>
 
 
@@ -13,18 +13,17 @@
   <div class="card mt-5 ml-5 mr-5 p-4">
     <div class="card-body">
     	<h5 class="card-title"><%= @ad.title %> </h5>
-    	<p class="card-title"><strong>Date : </strong></p>
-      <p class="card-title"><strong>Adress : </strong><%= @ad.adress %> min</p>
-    	<p class="card-title"><strong>Zip_code: </strong><%= @ad.zip_code %></p>
-    	<p class="card-title"> <strong>Description : </strong></br></br> <%= @event.description %></p></br>  </br> 
     	
+      <p class="card-title"><strong> Description : </strong><%= @ad.description %> min</p>
+    	<p class="card-title"><strong>Adress : </strong><%= @ad.adress %></p>
+    	<p class="card-title"> <strong>Zip_code : </strong></br></br> <%= @ad.zip_code %></p></br>  </br> 
+		<p class="card-title"> <strong>Date : </strong></br></br> <%= @ad.date.created_at.strftime("%d/%m/%Y") %></p>
+    	<p class="card-title"><strong>Phone created the : </strong><%= @ad.phone %></p></br>  </br> 
     	</br>	
    		
-
-  
    		<% if user_signed_in?%>
         	<%= link_to 'Edit', edit_ad_path(@ad) %> |
-        	<%= link_to 'Destroy', ad_path(@ad), method: :delete, data: { confirm: 'Are you sure?' }  %>
+        	<%= link_to 'Destroy', ads_path(@ad), method: :delete, data: { confirm: 'Are you sure?' }  %>
       	<% end %>
         
 
@@ -32,6 +31,4 @@
     </div>
   </div>
 </div>
-
-
 

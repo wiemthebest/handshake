@@ -4,6 +4,6 @@ Rails.application.routes.draw do
  root 'ads#index'
  devise_for :users
 
- resources :ads, only: [:index, :show, :create, :new, :edit, :update, :destroy]
+ resources :ads
 
 end

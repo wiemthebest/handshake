@@ -1,2 +1,3 @@
 class Formation < ApplicationRecord
+ 
 end

@@ -1,16 +1,23 @@
 class AdsController < ApplicationController
   include ApplicationHelper
+
+
   
   def index
     @ads = Ad.all
   end
+  
   def show
-   @ad= Ad.find(params[:id])
+    @ad = ad_find
+    @id = params[:id]
   end
 
   
   def new
   end
+
+
+
   def create
     @ad=Ad.new(title: params[:title],
     description:params[:description],
@@ -21,11 +28,15 @@ class AdsController < ApplicationController
     phone:params[:phone])
     
     if @ad.save
-      redirect_to ads_path(@ad.id)
+     redirect_to ads_path, alert: 'annonce enregistré !'
     else
-      redirect_to new_ad_path
+      @ad.errors.messages.each_with_index do |m, index|
+        flash.now[:alert] = m[index + 1][0]
+      end
+      render :new
     end
   end
+
   
 
   def edit
@@ -39,21 +50,7 @@ class AdsController < ApplicationController
     redirect_to ad_path(@ad.id)
   end
 
-  def destroy
-    @ad.destroy
-    redirect_to ad_path, notice:"Votre Annonce  a été supprimée !"
-  end
-
-  def update
-    @ad.cover.attach(params[:cover])
-    if @ad.update(Ad_params)
-      redirect_to ad_path, notice:"Votre Ad a été mise à jour !"
-    else
-      render :edit
-    end
-  end
-
-
+  
 
 
 end
