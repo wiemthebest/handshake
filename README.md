@@ -60,7 +60,9 @@ On utilisera les langages HTML, CSS et Javascript (en veillant à contrôler le 
 Autres fonctionnalités supplémentaires à envisager :
 
 - Réservation en ligne d’un créneau de formation en amont de la rencontre
-- Système d’évaluation du degré de complexité estimé de l’aide, afin de se positionner en toute connaissance de cause. Ex : ⭐⭐⭐ Un peu d’expérience est recommandée / ⭐ C’est à la portée de tous même sans expérience : Aide d’une personne aveugle vs Gestion d’autisme sévère par exemple
+- Système d’évaluation du degré de complexité estimé de l’aide, afin de se positionner en toute connaissance de cause. 
+
+Ex : ⭐⭐⭐ Un peu d’expérience est recommandée / ⭐ C’est à la portée de tous même sans expérience : Aide d’une personne aveugle vs Gestion d’autisme sévère par exemple
 - Système de dons pour financer les formations…
 - …
 
