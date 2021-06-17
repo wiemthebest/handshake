@@ -1,0 +1,10 @@
+.img-center {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25rem;
+}
+
+.img-hero {
+    background-image: url("app/assets/images/hero.jpg");  
+}
