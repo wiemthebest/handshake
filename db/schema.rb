@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_06_16_110042) do
     t.string "title"
     t.text "description"
     t.string "adress"
-    t.string "date"
+    t.time "date"
     t.string "zip_code"
     t.string "phone"
     t.datetime "created_at", null: false

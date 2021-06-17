@@ -1,0 +1,13 @@
+<div class="card my-4" >
+  
+    <div class="card-body">
+      <h5 class="card-title"><%=@ad.title%></h5>
+      <h6><%=@ad.date%></h6>
+      <p class="card-text">
+        <%=@ad.description%>
+      </p>
+      <%=link_to 'Voir', ad_path(@ad.id), class: 'btn-lg btn-primary'%>
+      
+    </div>
+  
+</div>
