@@ -1,2 +1,31 @@
-<div class="container my-5">
-    <h1>Créer une annonce </h1>
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+ 
+   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <h3> Complete the fields !</h3>
+  <div class="row justify-content-center mt-4 mb-2 ">
+
+  </div>
+  <div class="row justify-content-center">
+    <p style = "width: 200px"> Titre   : <input type="text" name="title"</p>
+  </div>
+   <div class: "row justify-content-center" > 
+          <label style = "width: 200px" for="form_search">date
+          <%= date_field_tag(:start_date, params[:start_date], ) %></label>
+   </div>  
+  <div class="row justify-content-center">
+    <p style = "width: 200px"> Description   : <input type="text" name="description"</p>
+  </div>
+  <div class="row justify-content-center">
+    <p style = "width: 200px"> Adress   : <input type="text" name="Adress"</p>
+  </div>
+  <div class="row justify-content-center">
+    <p style = "width: 200px"> Zip_code : <input type="mail" name="zip_code" </p>
+  </div>
+   <div class="row justify-content-center">
+    <p style = "width: 200px"> phone : <input type="mail" name="phone " </p>
+  <div class="actions">
+
+   <div class="actions text-center mt-5">
+ <button type="submit" name="commit" class="btn btn-primary mb-5">Submit</button>
+  </div>
+<% end %>
