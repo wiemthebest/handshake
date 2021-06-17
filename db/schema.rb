@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 2021_06_15_212511) do
     t.string "encrypted_password", default: "", null: false
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
-    t.string "type", default: "", null: false
+    t.string "description", default: "", null: false
+    t.string "classification", default: "", null: false
     t.string "phone", default: "", null: false
     t.string "address", default: "", null: false
     t.string "zip_code", default: "", null: false
