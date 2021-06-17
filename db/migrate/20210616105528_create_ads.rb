@@ -9,7 +9,6 @@ class CreateAds < ActiveRecord::Migration[5.2]
       t.string :date
       t.string :zip_code
       t.string :phone
-
       t.timestamps
     end
   end
