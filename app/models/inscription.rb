@@ -1,2 +1,0 @@
-class Inscription < ApplicationRecord
-end
