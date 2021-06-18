@@ -6,7 +6,6 @@ end
 
 def show
     @ad = Ad.find(params[:id])
-    @date = @ad.date.to_date.strftime('%d %m %Y')
     
 end
 
@@ -25,7 +24,7 @@ def create
     )
 
     if @ad.save
-        redirect_to ad_index_path,  notice: "Votre mission a bien été créée"
+        redirect_to ad_path(@ad.id), notice: "votre annonce a été bien créer"
       else
         render :new,  notice: "Erreur lors de la création de votre mission"
       end
@@ -62,9 +61,5 @@ def create
      )
   end
 
-  def ad_creator?
-    unless Ad.find(params[:id]).organizer == current_user
-      redirect_to ad_path, notice: "Ce n'est pas votre événement"
-    end
-  end
+  
 end

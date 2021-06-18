@@ -1,6 +1,5 @@
 class Ad < ApplicationRecord
-  validates :date,
-            presence: true
+
            
 
   validates :adress,
