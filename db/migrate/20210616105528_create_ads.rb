@@ -6,7 +6,7 @@ class CreateAds < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.string :adress
-      t.time :date
+      t.datetime :date
       t.string :zip_code
       t.string :phone
       t.timestamps
