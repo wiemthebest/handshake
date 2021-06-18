@@ -1,0 +1,13 @@
+<%=render 'banner'%>
+<div class="container mt-5">
+<%=link_to 'creat les annonces', new_ad_path, class: 'btn-lg btn-primary'%>
+  <div class="row justify-content-center">
+    <%@ads.each do |e|%>
+      <div class="col-4">
+        <%@ad = e%>
+        <%=render partial: 'ad_card', object: @ad%>
+        
+      </div>
+    <%end%>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+  
+   <div class="conte" >
+   <div class="container">
+  <div class="card my-4" >
+
+<%object = @object%>
+<%page_title = @page_title%>
+
+
+   
+        <div class="jumbo-layer"></div>
+        <h1 class="display-3"><%=page_title%></h1>
+        <div class="card-body">
+      <h5 class="card-title"><%=@ad.title%></h5>
+      <h6><%=@ad.date%></h6>
+      <p class="card-text">
+        <%=@ad.description%>
+      </p>
+        <p class="card-text">
+        <%=@ad.adress%>
+      </p>
+        <p class="card-text">
+        <%=@ad.zip_code%>
+      </p>
+        <p class="card-text">
+        <%=@ad.phone%>
+      </p>
+    </div>
+
+    <div class="form-group d-flex">
+     <%=link_to 'modifier', edit_ad_path(@ad.id), class: 'btn-lg btn-primary'%>
+      <%=button_to 'Supprimer', ad_path(@ad.id), method: 'delete', class: "btn btn-danger", style: "margin-left: 1rem;"%>
+    </div>
+    
+   
+  </div> 
+  </div> 
+
+   </div> 
