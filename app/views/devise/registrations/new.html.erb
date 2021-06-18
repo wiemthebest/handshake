@@ -24,7 +24,7 @@
          
         <div class="form-group">
           <label>Type</label>
-          <%= f.select :classification, ['Bénovole', 'Demandeur d\'aide'], {}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+         <%= f.select :classification, options_for_classification, {}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
         </div>
         <div class="actions mt-5">
           <%= f.submit "Sign up", class: "btn btn-lg btn-primary btn-block" %>

@@ -3,17 +3,16 @@
          <img src="<%= asset_path('logo-handshake.png') %>" alt="IMG-LOGO" width="150" height="48"/>
       </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Annonces</a>
-    </li>
+      <%= link_to "Annonces", ads_path, class:"nav-link"  %>
+      </li>
 
     <li class="nav-item">
-    <%= link_to "Ressources", edit_user_registration_path, class:"nav-link active" %>
-
+    <%= link_to "Formations", root_path, class:"nav-link" %>
     </li>
     <li class="nav-item">
-    <%= link_to "Contact", edit_user_registration_path, class:"nav-link active"  %>
+    <%= link_to "Contact", root_path, class:"nav-link"  %>
     </li>
     </ul>
     </div>
