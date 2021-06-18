@@ -1,9 +1,13 @@
 <div class="jumbotron-fluid text-center jumbo jumbo-create-event">
   <div class="layer"></div>
-  <h1 class="display-3 text-light">Créer une annonce </h1>
+  <h1 class="display-3">Créer une annonce </h1>
   
 </div>
 <div class="container mt-5" style="width: 40rem;">
+<% flash.each do |msg| %>
+  <%= content_tag :div, msg, class: "alert alert-info" %>
+<% end %>
+
   <%=form_tag url_for(ads_path), method: 'post' do%>
 
     <div class="form-group mt-4">

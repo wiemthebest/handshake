@@ -23,7 +23,9 @@ Participation.destroy_all
 							 phone: Faker::PhoneNumber.phone_number,
 							 address: Faker::Address.street_address,
 							 zip_code: Faker::Address.zip_code,
-							 date_of_birth: Faker::Date.birthday)
+							 date_of_birth: Faker::Date.birthday,
+							 classification: "benevole"
+							)
 end
 p "users create !"
 
@@ -34,7 +36,10 @@ p "users create !"
 						 phone: Faker::PhoneNumber.phone_number,
 						 adress: Faker::Address.street_address,
 						 zip_code: Faker::Address.zip_code,
-						 date: Faker::Date.between(from: '2021-06-16', to: '2023-06-16'))
+						 date: Faker::Date.between(from: '2021-06-16', to: '2023-06-16'),
+						 user: User.first,
+						 classification: User.first.classification
+	)
 end
 p "ads create !"
 
