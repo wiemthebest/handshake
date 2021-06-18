@@ -1,5 +1,6 @@
 class AdsController < ApplicationController
-
+  before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :is_ad_admin?, only: [:edit]
 def index
     @ads = Ad.all
 end
@@ -15,12 +16,14 @@ end
 def create
 
     @ad = Ad.create(
+      date: params[:date],
       title: params[:title],
-      description: params[:description],
       adress: params[:adress],
+      description: params[:description],
       zip_code: params[:zip_code],
-      phone: params[:phone]
-      
+      phone: params[:phone],
+      user: current_user,
+      classification: current_user.classification
     )
 
     if @ad.save
@@ -58,13 +61,20 @@ def create
   def destroy
     @ad = Ad.find(params[:id])
     if @ad.destroy
-      redirect_to ad_path, notice: "Suppression de l'événement effectuée"
+      redirect_to ads_path, notice: "Suppression de l'événement effectuée"
     else
       flash.now[:notice] = "L'événement n'a pas pu être supprimé"
       render :edit
     end
   end
 
-  private
+  def is_ad_admin?
+    @ad = Ad.find(params[:id])
+    if @ad.user == current_user
+      return true
+    else
+      redirect_to ads_path, danger: "You didn't create this event"
+    end
+  end
   
 end

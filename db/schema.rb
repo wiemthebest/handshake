@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_06_16_110042) do
   enable_extension "plpgsql"
 
   create_table "ads", force: :cascade do |t|
-    t.string "type"
+    t.string "classification", default: "benevole", null: false
     t.string "category"
     t.string "title"
     t.text "description"
@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(version: 2021_06_16_110042) do
     t.datetime "date"
     t.string "zip_code"
     t.string "phone"
+    t.bigint "user_id"
+    t.bigint "Participation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["Participation_id"], name: "index_ads_on_Participation_id"
+    t.index ["user_id"], name: "index_ads_on_user_id"
   end
 
   create_table "formations", force: :cascade do |t|
@@ -60,7 +64,7 @@ ActiveRecord::Schema.define(version: 2021_06_16_110042) do
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
     t.string "description", default: "", null: false
-    t.string "classification", default: "", null: false
+    t.string "classification", default: "benevole", null: false
     t.string "phone", default: "", null: false
     t.string "address", default: "", null: false
     t.string "zip_code", default: "", null: false

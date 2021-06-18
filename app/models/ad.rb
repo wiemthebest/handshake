@@ -1,6 +1,7 @@
 class Ad < ApplicationRecord
-
-           
+  belongs_to :user
+  has_many :participations
+  has_many :users, through: :participations
 
   validates :adress,
             presence: true,
@@ -12,18 +13,12 @@ class Ad < ApplicationRecord
 
   validates :description,
             presence: true,
-            length: { minimum: 20, maximum: 1000 }
+            length: { minimum: 10, maximum: 1000 }
 
   validates :zip_code,
             presence: true
           
-
-
   validates :phone,
             presence: true
 
-
-  has_many :participations
-  has_many :users, through: :participations
-  
 end

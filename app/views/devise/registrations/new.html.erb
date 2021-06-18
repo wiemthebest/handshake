@@ -21,38 +21,7 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
         </div>
 
-          <div class="form-group">
-        <label>First name</label>
-        <%= f.text_field :first_name, class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-        <label>Last name</label>
-        <%= f.text_field :last_name, class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-      <label>date_of_birth</label>
-      <%= f.date_field :date_of_birth, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-        <label>Adress</label>
-        <%= f.text_area :address, class: "form-control" %>
-    </div>
-
-      
-      <div class="form-group">
-        <label>Zip_code</label>
-        <%= f.text_area :zip_code, class: "form-control" %>
-      </div>
-
-
-    <div class="form-group">
-      <label>Phone</label>
-      <%= f.text_area :phone, class: "form-control" %>
-    </div>  
-
+         
         <div class="form-group">
           <label>Type</label>
           <%= f.select :classification, ['Bénovole', 'Demandeur d\'aide'], {}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
