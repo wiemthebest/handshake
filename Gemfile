@@ -78,4 +78,6 @@ gem 'better_errors'
 gem 'bootstrap', '~> 5.0.1'
 gem "font-awesome-rails", '~> 4.5'
 gem 'jquery-rails'
-
+gem 'mailboxer'
+gem 'simple_form'
+gem 'record_tag_helper', '~> 1.0'
