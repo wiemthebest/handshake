@@ -35,7 +35,9 @@
   <%=link_to 'Supprimer', ad_path(@ad.id), method: 'delete', class: "btn-lg btn-danger", style: "margin-left: 1rem;"%>
   <% end %>
  </div>
- 
+ <%= link_to user_messages_path(@ad.user) do %>
+  <button class="btn btn-primary btn-margin-top">Contacter le propriétaire</button>
+<% end %>
 </div>
 </div> 
 </div> 
