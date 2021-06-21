@@ -1,38 +1,38 @@
 <div class="container w-50">
 
-  <h2 class="my-5 text-center" > Edit your profile </h2>
+  <h2 class="my-5 text-center" > Editer mon profil </h2>
 
   <%= form_for @user do |f| %>
 
     <div class="form-group">
-      <label>First name</label>
+      <label>Prénom</label>
       <%= f.text_field :first_name, class: "form-control" %>
     </div>
 
     <div class="form-group">
-      <label>Last name</label>
+      <label>Nom</label>
       <%= f.text_field :last_name, class: "form-control" %>
     </div>
 
     <div class="form-group">
-    <label>date_of_birth</label>
+    <label>Date de naissance</label>
     <%= f.date_field :date_of_birth, class: "form-control" %>
   </div>
 
   <div class="form-group">
-      <label>Adress</label>
+      <label>Adresse</label>
       <%= f.text_area :address, class: "form-control" %>
    </div>
 
     
     <div class="form-group">
-      <label>Zip_code</label>
+      <label>Code postal</label>
       <%= f.text_area :zip_code, class: "form-control" %>
     </div>
 
 
   <div class="form-group">
-    <label>Phone</label>
+    <label>Téléphone</label>
     <%= f.text_area :phone, class: "form-control" %>
   </div>
 
@@ -47,7 +47,7 @@
   </div>
     
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Edit your informations</button>
+      <button type="submit" class="btn btn-primary">Editer vos informations</button>
     </div>
 
   <% end %>  
