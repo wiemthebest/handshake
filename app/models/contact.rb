@@ -10,5 +10,5 @@ class Contact < ApplicationRecord
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "L'email n'est pas au bon format" }
   validates :message,
     presence: true,
-    length: { minimum: 50, maximum: 10000 }
+    length: { minimum: 10, maximum: 10000 }
 end

@@ -3,11 +3,10 @@ class ContactController < ApplicationController
     @contact = Contact.new
   end
 
-  def create
+ def create
     @contact = Contact.new
     if @contact.save
-      ContactMailer.contact_form(@contact).deliver_now
-      redirect_to static_pages_path, notice:"Votre email nous a bien été envoyé"
+      redirect_to contact_path(@contact.id), notice:"Votre email nous a bien été envoyé"
     else
       flash[:error] = "Une erreur est survenue"
       render :new
@@ -22,7 +21,7 @@ class ContactController < ApplicationController
       :first_name,
       :last_name,
       :email,
-      :message,
+      :message
     )
   end
 end
