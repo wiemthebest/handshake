@@ -9,6 +9,10 @@ class User < ApplicationRecord
   after_create :welcome_send, :geocode
 
 
+ has_one_attached :avatar
+         
+
+
   def welcome_send
   UserMailer.welcome_email(self).deliver_now
   end
@@ -20,4 +24,5 @@ class User < ApplicationRecord
   def full_address
     [address, city, zip_code, "france"].compact.join(', ')
   end      
+
 end

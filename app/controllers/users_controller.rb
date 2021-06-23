@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show]
   before_action :check_user
-  
+ 
   def show
+    @user = User.find(params[:id])
     unless is_author?(@user)
       redirect_back(fallback_location: root_path)
     end
