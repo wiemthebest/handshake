@@ -4,9 +4,6 @@
   
 </div>
 <div class="container mt-5" style="width: 40rem;">
-<% flash.each do |msg| %>
-  <%= content_tag :div, msg, class: "alert alert-info" %>
-<% end %>
 
   <%=form_tag url_for(ads_path), method: 'post' do%>
 
@@ -40,11 +37,17 @@
 
     <div class="form-group mt-4">
       <h3>
-        <%= label_tag 'zip_code' %>
+        <%= label_tag 'zip code' %>
       </h3>
       <%= text_field_tag 'zip_code','', require: true, class: "form-control"%>
     </div>
 
+     <div class="form-group mt-4">
+        <h3>
+        <%= label_tag 'city' %>
+      </h3>
+         <%=select_tag 'city', options_for_select(city_list), class: "form-control"%>
+    </div>
     <div class="form-group mt-4">
       <h3>
         <%= label_tag 'phone' %>

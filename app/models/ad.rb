@@ -1,7 +1,12 @@
+include UsersHelper
 class Ad < ApplicationRecord
+  
   belongs_to :user
   has_many :participations
   has_many :users, through: :participations
+  geocoded_by :full_address
+  after_validation :geocode
+  after_create :geocode
 
   validates :adress,
             presence: true,
@@ -21,4 +26,8 @@ class Ad < ApplicationRecord
   validates :phone,
             presence: true
 
+ def full_address
+   [adress, city, zip_code, "france"].compact.join(', ')
+ end 
+ 
 end
