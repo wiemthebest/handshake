@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <title>Formations</title>
+</head>
+<body>
+<br>
+<div role="introduction aux ressources">
+  <div class="card justify-content col-md-9">
+    <div class="card-body">
+      <h3><strong>Notre mission</strong></h3>
+      <p>Handshake est une plateforme collaborative et solidaire qui vise à faciliter la mise en relation entre des bénévoles souhaitant se rendre utile et des personnes en situation de handicap.</p>
+      <p>Notre démarche a pour but de faire évoluer le regard sur le handicap au travers de diverses ressources informatives, telle que la formation par exemple, afin de donner des clés pour favoriser une société plus inclusive.</p>
+      <p>Pour ce faire, nous vous proposons quelques MOOCs de découverte sur différentes problématiques du handicap</p>
+      <p>D'autres contenus sont encore à venir, afin de pouvoir vous proposer des formations complètes de sensibilisation aux différentes problématiques liées au handicap.</p>
+      </div>
+    </div>
+  </div>
+
+<br>
+  <div class="card col-md-9">
+    <div class="card-header">
+     <h4 class="card-title">Sensibilisation au handicap : Devenez acteur d'une société plus inclusive</h4>
+    </div>
+    <div class="card-body ">
+      <h5 class="card-title"> Sensibiliser le grand public et briser les préjugés </h5>
+      <p class="card-text"> Une formation en ligne gratuite de 2h pour tout comprendre sur le handicap. 
+      <ul>
+        <li>Module 1 : Définir le handicap</li>
+        <li>Module 2 : les formes de handicap</li>
+        <li>Module 3 : le handicap dans la société</li>
+      </ul>
+
+    <p>Necéssite une inscription sur le site</p>
+
+      <%= link_to 'Lien vers le MOOC de sensibilisation', "https://sensibilisation-au-handicap.the-mooc-agency.com/", class: "btn btn-primary", target:"_blank"%> 
+
+    </div>
+  </div>
+<br>
+
+  <div class="card col-md-9">
+    <div class="card-header">
+     <h4 class="card-title">Handicap et entreprise: Intégrez durablement le handicap dans votre entreprise</h4>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Montrer la diversité comme une chance auprès du grand public, des entreprises, des collectivités...</h5>
+      <p class="card-text">Un parcours de 3h avec quiz, vidéos et témoignages pour mettre toutes les chances de son côté pour trouver un emploi</p>
+      <ul>
+        <li>Module 1 : Dépassez vos a priori sur le handicap dans l’entreprise</li>
+        <li>Module 2 : Répondez aux obligations légales en matière de handicap</li>
+        <li>Module 3 : Recrutez et intégrez un salarié en situation de handicap</li>
+        <li>Module 4 : Accompagnez un salarié rencontrant des difficultés de santé au travail</li>
+      </ul>
+      <%= link_to "Lien vers le MOOC pour l'entreprise", "https://www.my-mooc.com/fr/mooc/handicap-et-entreprise/", class: "btn btn-primary", target:"_blank"%> 
+    </div>
+  </div>
+<br>
+
+  <div class="card col-md-9">
+    <div class="card-header">
+       <h4 class="card-title">HandiMOOC : Pour aider les personnes en situation de handicap à rechercher un emploi</h4> 
+    </div>
+    <div class="card-body col-md-9">
+      <h5 class="card-title"> Les discriminations : comprendre pour agir </h5>
+      <p class="card-text"> Une formation pour prévenir et éviter les situations discriminantes dans un contexte où le handicap demeure la première cause de discrimination en France.</p>
+       <ul>
+        <li>Module 1 : Handicap et projet professionnel</li>
+        <li>Module 2 : Organiser et outiller votre recherche d'emploi</li>
+        <li>Module 3 : Communiquer sur votre situation de handicap</li>
+       </ul>
+     <p>Necéssite une inscription sur le site</p>
+
+       <%= link_to "Lien vers le MOOC de recherche d'emploi", "https://handimooc.fr/", class: "btn btn-primary", target:"_blank"%>
+    </div>
+  </div>
+<br>
+
+</body>
+</html>
