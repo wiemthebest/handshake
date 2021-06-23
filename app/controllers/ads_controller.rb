@@ -1,13 +1,26 @@
 class AdsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
   before_action :is_ad_admin?, only: [:edit]
+
 def index
-    @ads = Ad.all
+    @ads = Ad.all.sort{|a,b| sorting(a,b)}
 end
+
+def sorting(a,b)
+  puts " #{a.distance_from(current_user)}  <=> #{b.distance_from(current_user)}"
+      if (a.distance_from(current_user) && b.distance_from(current_user))
+        return a.distance_from(current_user)  <=> b.distance_from(current_user)
+        elsif b.to_coordinates
+        return 1
+        else 
+        return 0
+      end
+end
+
 
 def show
     @ad = Ad.find(params[:id])
-    
+    @distance = @ad.distance_from(current_user)
 end
 
 def new
@@ -21,6 +34,7 @@ def create
       adress: params[:adress],
       description: params[:description],
       zip_code: params[:zip_code],
+      city: params[:city],
       phone: params[:phone],
       user: current_user,
       classification: current_user.classification
@@ -48,6 +62,7 @@ def create
       adress: params[:adress],
       description: params[:description],
       zip_code: params[:zip_code],
+      city: params[:city],
       phone: params[:phone]
     )
 

@@ -21,6 +21,10 @@
       <label class="h3">Zip code</label>
       <%=text_field_tag 'zip_code', @ad.zip_code, class: "form-control"%>
     </div>
+     <div class="form-group">
+        <label class="h3">City</label>
+         <%=select_tag 'city', options_for_select(city_list, @ad.city), class: "form-control"%>
+    </div>
     <div class="form-group mb-3">
       <label class="h3"> date</label>
       <%=text_field_tag 'date', @ad.date, class: "form-control"%>

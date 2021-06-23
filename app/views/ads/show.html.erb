@@ -24,9 +24,17 @@
      <p class="card-text">
      <%=@ad.zip_code%>
    </p>
+    <p class="card-text">
+     <%=@ad.city%>
+   </p>
      <p class="card-text">
      <%=@ad.phone%>
    </p>
+    <% if @distance %>
+   <p class="card-text">
+     Distance: <%=@distance.round(2)%> km
+   </p>
+   <% end %>
  </div>
 
  <div class="form-group d-flex">
