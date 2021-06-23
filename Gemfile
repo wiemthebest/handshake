@@ -80,3 +80,4 @@ gem "font-awesome-rails", '~> 4.5'
 gem 'jquery-rails'
 gem "letter_opener", group: :development
 gem 'dotenv-rails'
+gem 'geocoder'

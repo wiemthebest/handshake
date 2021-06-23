@@ -9,4 +9,12 @@ module UsersHelper
       ['Demandeur d\'aide','demandeur']
     ]
   end
+
+  def city_list
+    [
+      ['Paris','paris'],
+      ['Ile-de-france','ile-de-france'],
+      ['Lyon','lyon']
+    ]
+  end
 end
