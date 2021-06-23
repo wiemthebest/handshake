@@ -10,19 +10,19 @@ class UsersController < ApplicationController
 
   def edit
     unless is_author?(@user)
-      redirect_to current_user, danger: "You can't edit an account that isn't yours"
+      redirect_to current_user, danger: "Vous ne pouvez pas éditer un compte qui n'est pas le votre"
     end
   end
 
   def update
     if is_author?(@user)
       if @user.update(user_params)
-        redirect_to @user, success: "Your informations have been updated"
+        redirect_to @user, success: "Vos informations ont été mises à jour"
       else
         render :edit
       end
     else
-      redirect_to user_path(params[:id]), danger: "You can't edit an account that isn't yours"
+      redirect_to user_path(params[:id]), danger: "Vous ne pouvez pas éditer un compte qui n'est pas le votre"
     end
   end
 

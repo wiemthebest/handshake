@@ -41,9 +41,9 @@ def create
     )
 
     if @ad.save
-        redirect_to ad_path(@ad.id), notice: "votre annonce a été bien créer"
+        redirect_to ad_path(@ad.id), notice: "Votre annonce a été bien crée"
       else
-        render :new,  notice: "Erreur lors de la création de votre mission"
+        render :new,  notice: "Erreur lors de la création de votre annonce"
       end
     
   end
@@ -67,18 +67,18 @@ def create
     )
 
     if @ad.save
-        redirect_to ad_path(@ad.id), notice: "votre annonce a été bien modifierr"
+        redirect_to ad_path(@ad.id), notice: "Votre annonce a été bien modifiée"
       else
-        render :new,  notice: "Erreur lors de la création de votre mission"
+        render :new,  notice: "Erreur lors de la création de votre annonce"
       end
   end
 
   def destroy
     @ad = Ad.find(params[:id])
     if @ad.destroy
-      redirect_to ads_path, notice: "Suppression de l'événement effectuée"
+      redirect_to ads_path, notice: "La suppression de l'annonce a bien été effectuée"
     else
-      flash.now[:notice] = "L'événement n'a pas pu être supprimé"
+      flash.now[:notice] = "L'annonce n'a pas pu être supprimée"
       render :edit
     end
   end
@@ -88,7 +88,7 @@ def create
     if @ad.user == current_user
       return true
     else
-      redirect_to ads_path, danger: "You didn't create this event"
+      redirect_to ads_path, danger: "Vous n'avez pas créee cette annonce"
     end
   end
   
