@@ -26,10 +26,14 @@
 
     
     <div class="form-group">
-      <label>Zip_code</label>
+      <label>Zip code</label>
       <%= f.text_area :zip_code, class: "form-control" %>
     </div>
 
+    <div class="form-group">
+          <label>City</label>
+         <%= f.select :city, city_list, {}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+    </div>
 
   <div class="form-group">
     <label>Phone</label>
