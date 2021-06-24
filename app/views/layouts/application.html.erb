@@ -19,7 +19,7 @@
   <%= render 'layouts/navbar'%>
     </header>
     <!--end of the header with the header element for TTS-->
-
+    <% if notice %><div class="alert alert-primary"><%= notice %></div> <% end %>
     <!-- each page -->
     <%= yield %>
     <!-- each page -->
