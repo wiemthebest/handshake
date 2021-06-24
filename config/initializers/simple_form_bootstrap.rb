@@ -4,11 +4,13 @@
 # This generator is maintained by the community around simple_form-bootstrap:
 # https://github.com/rafaelfranca/simple_form-bootstrap
 # All future development, tests, and organization should happen there.
+
 # Background history: https://github.com/heartcombo/simple_form/issues/1561
 
 # Uncomment this and change the path if necessary to include your own
 # components.
 # See https://github.com/heartcombo/simple_form#custom-components
+
 # to know more about custom components.
 # Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
 
