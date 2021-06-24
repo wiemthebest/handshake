@@ -79,3 +79,6 @@ gem 'bootstrap', '~> 5.0.1'
 gem "font-awesome-rails", '~> 4.5'
 gem 'jquery-rails'
 gem 'simple_form'
+gem "letter_opener", group: :development
+gem 'dotenv-rails'
+gem 'geocoder'

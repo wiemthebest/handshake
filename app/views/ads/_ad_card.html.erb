@@ -12,13 +12,15 @@
        <p class="card-text">
         <%=@ad.zip_code%>
       </p>
+      <p class="card-text">
+        <%=@ad.city%>
+      </p>
        <p class="card-text">
         <%=@ad.date%>
       </p>
        <p class="card-text">
         <%=@ad.phone%>
       </p>
-    
       <%=link_to 'voir', ad_path(@ad.id), class: 'btn-lg btn-primary'%>
       
        </div>
