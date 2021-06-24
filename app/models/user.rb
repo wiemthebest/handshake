@@ -8,7 +8,6 @@ class User < ApplicationRecord
   before_save :geocode
   after_create :welcome_send, :geocode
   has_one_attached :avatar
-
   
 
   def welcome_send
@@ -21,7 +20,8 @@ class User < ApplicationRecord
 
   def full_address
     [address, city, zip_code, "france"].compact.join(', ')
-  end   
+  end      
+
   
   def friends
     friends = Message.where(sender: self).map { |message| message.receiver} + Message.where(receiver: self).map { |message| message.sender}
@@ -33,5 +33,6 @@ class User < ApplicationRecord
     conversation = Message.where(sender: self, receiver: friend) + Message.where(sender: friend, receiver: self)
     conversation.sort_by { |message| message.created_at }
   end  
+
 
 end
