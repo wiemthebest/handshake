@@ -82,3 +82,4 @@ gem "letter_opener", group: :development
 gem 'dotenv-rails'
 gem 'geocoder'
 gem 'simple_form'
+gem 'rails_admin'
