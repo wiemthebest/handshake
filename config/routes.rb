@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   root 'ads#index'
   resources :ads
   resources :trainings
-
+  resources :contact, only: [:new, :create]
 end
