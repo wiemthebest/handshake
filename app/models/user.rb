@@ -24,5 +24,5 @@ class User < ApplicationRecord
   def full_address
     [address, city, zip_code, "france"].compact.join(', ')
   end      
-   scope :admin, -> { where(admin: true) }
+   
 end
