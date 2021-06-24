@@ -1,6 +1,6 @@
 <div class="jumbotron-fluid text-center jumbo jumbo-modif-event">
   <div class="layer"></div>
-  <h1 class="display-3 text-light">Modifier l'événement</h1>
+  <h1 class="display-3 text-light">Modifier l'annonce</h1>
 </div>
 <div class="container mt-5" style="width: 45rem;">
   <%=form_tag ad_path(@ad.id), method: 'patch' do%>
@@ -10,7 +10,7 @@
     </div>
     
     <div class="form-group">
-      <label class="h3">adress</label>
+      <label class="h3">Adresse</label>
       <%=text_field_tag 'adress', @ad.adress, class: "form-control"%>
     </div>
     <div class="form-group">
@@ -18,15 +18,19 @@
       <%=text_area_tag 'description', @ad.description, class: "form-control"%>
     </div>
     <div class="form-group">
-      <label class="h3">Zip code</label>
+      <label class="h3">Code postal</label>
       <%=text_field_tag 'zip_code', @ad.zip_code, class: "form-control"%>
     </div>
+     <div class="form-group">
+        <label class="h3">City</label>
+         <%=select_tag 'city', options_for_select(city_list, @ad.city), class: "form-control"%>
+    </div>
     <div class="form-group mb-3">
-      <label class="h3"> date</label>
+      <label class="h3"> Date de l'annonce</label>
       <%=text_field_tag 'date', @ad.date, class: "form-control"%>
     </div>
     <div class="form-group mb-3">
-      <label class="h3">phone</label>
+      <label class="h3">Téléphone</label>
       <%=text_field_tag 'phone', @ad.phone, class: "form-control"%>
     </div>
     <div class="form-group d-flex">

@@ -24,9 +24,17 @@
      <p class="card-text">
      <%=@ad.zip_code%>
    </p>
+    <p class="card-text">
+     <%=@ad.city%>
+   </p>
      <p class="card-text">
      <%=@ad.phone%>
    </p>
+    <% if @distance %>
+   <p class="card-text">
+     Distance: <%=@distance.round(2)%> km
+   </p>
+   <% end %>
  </div>
 
  <div class="form-group d-flex">
@@ -35,7 +43,9 @@
   <%=link_to 'Supprimer', ad_path(@ad.id), method: 'delete', class: "btn-lg btn-danger", style: "margin-left: 1rem;"%>
   <% end %>
  </div>
- 
+ <%= link_to user_messages_path(@ad.user) do %>
+  <button class="btn btn-primary btn-margin-top">Contacter le propriétaire</button>
+<% end %>
 </div>
 </div> 
 </div> 
