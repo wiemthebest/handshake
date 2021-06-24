@@ -9,6 +9,10 @@
     color:#fff !important;
 }
 
+.shadowing {
+  text-shadow: 1px 0px 0px rgba(0,0,0,1) !important;
+}
+
 .text-color-black{
   color :#000 !important;
 }
