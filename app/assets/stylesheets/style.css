@@ -6,12 +6,34 @@
 }
 
 .text-color-white {
-    color:#fff;
+    color:#fff !important;
+}
 
+.text-color-black{
+  color :#000 !important;
 }
 
 .zipcode-container {
 
     width: 1000px !important;
 }
+.btn-info-css {
+  color: #000;
+  background-color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+}
 
+.btn-outline-info-css {
+  color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+}
+
+.bg-primary-css {
+  background-color: #113357 !important;
+
+}
+.btn-primary-css {
+  color: #fff !important;
+  background-color: #113357 !important;
+  border-color: #113357 !important;
+}
