@@ -4,3 +4,13 @@
     background-size: cover;
     height: 25rem;
 }
+
+.text-color-white {
+    color:#fff;
+
+}
+
+.zipcode-container {
+
+    width: 450px !important;
+}
