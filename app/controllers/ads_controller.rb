@@ -6,6 +6,24 @@ def index
     @ads = Ad.all.sort{|a,b| sorting(a,b)}
 end
 
+def benevoles
+  @ads = Ad.where(classification: options_for_classification[0])
+  if @ads.nil?
+    return @ads
+  end
+  @ads = @ads.sort{|a,b| sorting(a,b)}
+end
+
+def demandeurs
+  @ads = Ad.where(classification: options_for_classification[1])
+  if @ads.nil?
+    return @ads
+  end
+  @ads = @ads.sort{|a,b| sorting(a,b)}
+end
+
+
+
 def sorting(a,b)
   puts " #{a.distance_from(current_user)}  <=> #{b.distance_from(current_user)}"
       if (a.distance_from(current_user) && b.distance_from(current_user))
