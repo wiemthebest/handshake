@@ -1,11 +1,11 @@
 
-<h1 class="text-center display-3">La liste des demandeur d'aides</h1>
+<h1 class="text-center display-4">La liste des demandeurs d'aide</h1>
 <div class="container">
 <%= render 'static_pages/searchbar_localization'%>  
 <%=link_to 'Créer une annonce', new_ad_path, class: 'btn-lg btn-primary'%>
   <div class="row justify-content-center">
     <%@ads.each do |e|%>
-      <div class="col-4">
+      <div class="col-sm-12 col-lg-4">
         <%@ad = e%>
         <%=render partial: 'ad_card', object: @ad%>
         
