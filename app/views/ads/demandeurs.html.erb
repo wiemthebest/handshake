@@ -1,0 +1,30 @@
+
+<h1 class="text-center display-4">Les annonces de demandes d'aide spécifique</h1>
+<div class="container">
+
+<div class="col-xs-12 px-3 py-2 my-5">	
+				<form class="form-horizontal">
+					<div class="col-xs-12 col-sm-8 mx-auto">
+					<%=form_tag demandeurs_path, method: 'get' do%>
+						<div class="input-group">
+								<%=select_tag 'city', options_for_select(city_list, @city), :include_blank => true, class: "form-control"%>
+							  <div class="input-group-btn">
+								<%= submit_tag "Rechercher", class: "btn btn-primary-css "%>
+						  	</div>
+						</div>
+						 <% end %>  
+					</div>
+				</form>
+</div>
+
+<%=link_to 'Créer une annonce', new_ad_path, class: 'btn-lg btn-primary'%>
+  <div class="row justify-content-center">
+    <%@ads.each do |e|%>
+      <div class="col-sm-12 col-lg-4">
+        <%@ad = e%>
+        <%=render partial: 'ad_card', object: @ad%>
+        
+      </div>
+    <%end%>
+  </div>
+</div>
