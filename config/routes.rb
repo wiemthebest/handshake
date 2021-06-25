@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   resources :users do
     resources :messages, only: [:index, :create]
   end
-
+  resources :categories
 end

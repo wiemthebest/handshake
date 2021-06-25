@@ -2,6 +2,8 @@ include UsersHelper
 class Ad < ApplicationRecord
   
   belongs_to :user
+  belongs_to :category
+  
   has_many :participations
   has_many :users, through: :participations
   geocoded_by :full_address
