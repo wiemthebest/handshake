@@ -9,27 +9,22 @@
 <%page_title = @page_title%>
 
 
-
      <div class="jumbo-layer"></div>
-     <h1 class="display-3"><%=page_title%></h1>
+     <h1 class="display-4"><%=page_title%></h1>
      <div class="card-body">
-   <h5 class="card-title"><%=@ad.title%></h5>
-   <h6><%=@ad.date%></h6>
    <p class="card-text">
      <%=@ad.description%>
    </p>
      <p class="card-text">
-     <%=@ad.adress%>
-   </p>
-     <p class="card-text">
-     <%=@ad.zip_code%>
-   </p>
-    <p class="card-text">
-     <%=@ad.city%>
-   </p>
-     <p class="card-text">
-     <%=@ad.phone%>
-   </p>
+        <label>Adresse: </label><br/><%=@ad.adress%>, <%=@ad.zip_code%> <%=@ad.city.capitalize %>
+      </p>
+    
+      <p class="card-text">
+       <label>Téléphone:</label> <%=@ad.phone%>
+      </p>
+       <p class="card-text">
+       Crée le <%=@ad.date.strftime("%F")%> par <%=@ad.user.name %>
+      </p>
     <% if @distance %>
    <p class="card-text">
      Distance: <%=@distance.round(2)%> km
