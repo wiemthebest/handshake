@@ -7,7 +7,7 @@
 <div class="card my-4" >
 <div class="card-body">
 <%page_title = @page_title%>
-
+<h1>Catégories : <%= @ad.category.title%></h1>
 
 
      <div class="jumbo-layer"></div>
@@ -35,9 +35,6 @@
      Distance: <%=@distance.round(2)%> km
    </p>
    <% end %>
-   <p class="cardt-text">
-   <%=@ad.category_id%>
-   </p>
  </div>
 
  <div class="form-group d-flex">
