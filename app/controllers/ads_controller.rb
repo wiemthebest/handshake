@@ -3,8 +3,57 @@ class AdsController < ApplicationController
   before_action :is_ad_admin?, only: [:edit]
 
 def index
-    @ads = Ad.all.sort{|a,b| sorting(a,b)}
+  @ads = Ad.all
+
+  if @ads.nil?
+    return @ads
+  end
+
+  unless params[:city].to_s.empty?
+    @city = params[:city]
+    @ads = Ad.where(city: @city)
+  else
+    @city = ''
+  end
+  #order by geoloc
+  @ads = @ads.sort{|a,b| sorting(a,b)}
 end
+
+def benevoles
+  @ads = Ad.where(classification: options_for_classification[0])
+
+  if @ads.nil?
+    return @ads
+  end
+
+  unless params[:city].to_s.empty?
+    @city = params[:city]
+    @ads = Ad.where(city: @city)
+  else
+    @city = ''
+  end
+  #order by geoloc
+  @ads = @ads.sort{|a,b| sorting(a,b)}
+end
+
+def demandeurs
+  @ads = Ad.where(classification: options_for_classification[1])
+
+  if @ads.nil?
+    return @ads
+  end
+
+  unless params[:city].to_s.empty?
+    @city = params[:city]
+    @ads = Ad.where(city: @city)
+  else
+    @city = ''
+  end
+  #order by geoloc
+  @ads = @ads.sort{|a,b| sorting(a,b)}
+end
+
+
 
 def sorting(a,b)
   puts " #{a.distance_from(current_user)}  <=> #{b.distance_from(current_user)}"

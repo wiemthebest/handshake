@@ -10,7 +10,6 @@ class CreateAds < ActiveRecord::Migration[5.2]
       t.string :zip_code
       t.string :phone
       t.belongs_to :user, index: true
-      t.belongs_to :Participation, index: true
       t.timestamps
     end
   end

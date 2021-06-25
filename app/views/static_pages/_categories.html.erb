@@ -1,47 +1,49 @@
 <!-- Categories -->
-<h2 class="card-header"><strong>Catégories</strong></h2>
-<!-- 1st row -->
-<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 fadeIn text-center" style="height: 150px">
-  <!-- 1st card -->
-  <div class="card-body column">
-    <%= link_to image_tag('icons8-folder-100.png', alt:"icone d'un dossier"), "#" %>
-      <p>Accompagnement social </p>
+<div class="container">
+  <h2 class="card-header"><strong>Catégories</strong></h2>
+  <!-- 1st row -->
+  <div class="row  fadeIn text-center" style="min-height: 150px">
+    <!-- 1st card -->
+    <div class="card-body column col-sm-12 col-lg-4">
+      <%= link_to image_tag('icons8-folder-100.png', alt:"icone d'un dossier"), "#" %>
+        <p>Accompagnement social </p>
+    </div>
+    <!-- 2nd card -->
+    <div class="card-body column col-sm-12 col-lg-4">
+      <%= link_to image_tag('icons8-ambulance-100-1.png', alt:"icone d'une ambulance"), "#" %>
+        <p>Déplacements médicaux</p>
+    </div>
+    <!-- 3rd card -->
+    <div class="card-body column col-sm-12 col-lg-4">
+
+      <%= link_to image_tag('icons8-book-reading-100.png', alt:"icone d'un livre ouvert"), "#" %>
+        <p>Lecture</p>
+
+    </div>
   </div>
-  <!-- 2nd card -->
-  <div class="card-body column">
-    <%= link_to image_tag('icons8-ambulance-100-1.png', alt:"icone d'une ambulance"), "#" %>
-      <p>Déplacements médicaux</p>
-  </div>
-  <!-- 3rd card -->
-  <div class="card-body column">
 
-    <%= link_to image_tag('icons8-book-reading-100.png', alt:"icone d'un livre ouvert"), "#" %>
-      <p>Lecture</p>
+  <!-- 2nd row -->
+  <div class="row fadeIn text-center" style="min-height: 150px">
+    <!-- 1st card -->
+    <div class="card-body column col-sm-12 col-lg-4">
 
-  </div>
-</div>
+      <%= link_to image_tag('icons8-trash-100.png', alt:"icone d'une poubelle"), "#" %>
 
-<!-- 2nd row -->
-<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 fadeIn text-center" style="height: 150px">
-  <!-- 1st card -->
-  <div class="card-body column">
+        <p>Tâches ménagères</p>
 
-    <%= link_to image_tag('icons8-trash-100.png', alt:"icone d'une poubelle"), "#" %>
+    </div>
+    <!-- 2nd card -->
+    <div class="card-body column col-sm-12 col-lg-4">
+      <%= link_to image_tag('icons8-track-and-field-100.png', alt:"icone d'un personnage en train de courir"), "#" %>
+        <p>Déplacement</p>
+    </div>
+    <!-- 3rd card -->
+    <div class="card-body column col-sm-12 col-lg-4">
 
-      <p>Tâches ménagères</p>
+      <%= link_to image_tag('icons8-hammer-100.png', alt:"icone d'un martaux"), "#" %>
 
-  </div>
-  <!-- 2nd card -->
-  <div class="card-body column">
-    <%= link_to image_tag('icons8-track-and-field-100.png', alt:"icone d'un personnage en train de courir"), "#" %>
-      <p>Déplacement</p>
-  </div>
-  <!-- 3rd card -->
-  <div class="card-body column">
+        <p>Petits travaux</p>
 
-    <%= link_to image_tag('icons8-hammer-100.png', alt:"icone d'un martaux"), "#" %>
-
-      <p>Petits travaux</p>
-
+    </div>
   </div>
 </div>
