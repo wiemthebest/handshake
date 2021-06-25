@@ -11,7 +11,7 @@ def index
 
   unless params[:city].to_s.empty?
     @city = params[:city]
-    @ads = Ad.where(city: @city)
+    @ads = @ads.where(city: @city)
   else
     @city = ''
   end
@@ -28,7 +28,7 @@ def benevoles
 
   unless params[:city].to_s.empty?
     @city = params[:city]
-    @ads = Ad.where(city: @city)
+    @ads = @ads.where(city: @city)
   else
     @city = ''
   end
@@ -45,7 +45,7 @@ def demandeurs
 
   unless params[:city].to_s.empty?
     @city = params[:city]
-    @ads = Ad.where(city: @city)
+    @ads = @ads.where(city: @city)
   else
     @city = ''
   end
