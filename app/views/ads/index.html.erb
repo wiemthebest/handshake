@@ -8,8 +8,27 @@
       <div class="col-4">
         <%@ad = e%>
         <%=render partial: 'ad_card', object: @ad%>
-        
+      
       </div>
     <%end%>
+  </div>
+  <br>
+ <div class="col-3">
+ <div class="card">
+ <div class="card-header">
+    Catégories
+    </div>
+  <div class="card-body">
+  <ul class=list-group>
+<%= @categories.each do |category|%>      
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  <%= link_to category.title, ads_path(:cate => category.id) %>
+  <span class="badge badge-primary badge-pill"><%= category.ads.count%></span>
+
+  </li>
+<% end %>
+  </ul>
+  </div>
+  </div>
   </div>
 </div>

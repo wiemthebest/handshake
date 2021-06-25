@@ -3,7 +3,17 @@ class AdsController < ApplicationController
   before_action :is_ad_admin?, only: [:edit]
 
 def index
-    @ads = Ad.all.sort{|a,b| sorting(a,b)}
+  @ads = Ad.all.sort{|a,b| sorting(a,b)}
+
+  @categories = Category.all  
+
+  cate = params[:cate] 
+  if !cate.nil?
+    @ads = Ad.where(:category_id => cate)
+  else
+    @ads = Ad.all
+  end
+  
 end
 
 def benevoles
