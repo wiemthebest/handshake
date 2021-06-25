@@ -55,6 +55,13 @@
       <%= text_field_tag 'phone','', require: true, class: "form-control"%>
     </div>
     
+<div class="form-group mt-4">
+      <h3>
+        <%= label_tag 'Catégorie' %>
+      </h3>
+      <%= select_tag 'category_id', Category.all.map {|c|[c.title, c.id]}, require: true, class: "form-control"%>
+    </div>
+
     <%= submit_tag "Créer", class: "btn btn-primary-css mt-4"%>
     
   <%end%>

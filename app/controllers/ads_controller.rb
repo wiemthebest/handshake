@@ -9,6 +9,11 @@ def index
     return @ads
   end
 
+  cate = params[:cate] 
+  if !cate.nil?
+    @ads = @ads.where(:category_id => cate)
+  end
+
   unless params[:city].to_s.empty?
     @city = params[:city]
     @ads = @ads.where(city: @city)
@@ -86,7 +91,8 @@ def create
       city: params[:city],
       phone: params[:phone],
       user: current_user,
-      classification: current_user.classification
+      classification: current_user.classification,
+      category_id: params[:category_id]
     )
 
     if @ad.save

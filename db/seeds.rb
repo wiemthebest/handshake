@@ -9,11 +9,21 @@ require 'faker'
 include UsersHelper
 Faker::Config.locale = 'fr'
 
+Category.destroy_all
 User.destroy_all
 Ad.destroy_all
 Formation.destroy_all
 Inscription.destroy_all
 Participation.destroy_all
+
+Category.create(title: "Accompagnement social")
+Category.create(title: "Tâches ménagères")
+Category.create(title: "Déplacements médicaux")
+Category.create(title: "Déplacements")
+Category.create(title: "Lecture")
+Category.create(title: "Petits Travaux")
+
+p "Catégories créer"
 
 10.times do
 	User.create!(first_name: Faker::Name.first_name,

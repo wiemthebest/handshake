@@ -7,7 +7,7 @@
 <div class="card my-4" >
 <div class="card-body">
 <%page_title = @page_title%>
-
+<h1>Catégories : <%= @ad.category.title%></h1>
 
      <div class="jumbo-layer"></div>
      <h1 class="display-4"><%=page_title%></h1>
@@ -43,7 +43,10 @@
   <button class="btn btn-primary-css btn-margin-top">Contacter le propriétaire</button>
 
 <% end %>
+<br><br>
+<%=link_to 'Retour', ads_path, class: 'btn-lg btn-info'%>
 </div>
+
 </div> 
 </div> 
 
