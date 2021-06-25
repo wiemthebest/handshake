@@ -8,14 +8,14 @@ end
 
 def benevoles
   @ads = Ad.where(classification: options_for_classification[0])
-  if @ads.blank? 
+  if !@ads.blank? 
     @ads = @ad.sort{|a,b| sorting(a,b)}
   end
 end
 
 def demandeurs
   @ads = Ad.where(classification: options_for_classification[1])
-  if(@ads.blank?) 
+  if !@ads.blank? 
     @ads = @ad.sort{|a,b| sorting(a,b)}
   end
 end
