@@ -23,7 +23,7 @@
        <label>Téléphone:</label> <%=@ad.phone%>
       </p>
        <p class="card-text">
-       Crée le <%=@ad.date.strftime("%F")%> par <%=@ad.user.name %>
+       Crée le <%=@ad.date.strftime("%F")%> <% if @ad.user %>par <%=@ad.user.name %><% end %>
       </p>
     <% if @distance %>
    <p class="card-text">
