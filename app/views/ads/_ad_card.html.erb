@@ -2,25 +2,20 @@
   
     <div class="card-body">
       <h5 class="card-title"><%=@ad.title%></h5>
-      <h6><%=@ad.date%></h6>
       <p class="card-text">
         <%=@ad.description%>
       </p>
        <p class="card-text">
-        <%=@ad.adress%>
+        <label>Adresse: </label><br/><%=@ad.adress%>, <%=@ad.zip_code%> <%=@ad.city.capitalize %>
       </p>
-       <p class="card-text">
-        <%=@ad.zip_code%>
-      </p>
+    
       <p class="card-text">
-        <%=@ad.city%>
+       <label>Téléphone:</label> <%=@ad.phone%>
       </p>
        <p class="card-text">
-        <%=@ad.date%>
+       Crée le <%=@ad.date.strftime("%F")%> par <%=@ad.user.name %>
       </p>
-       <p class="card-text">
-        <%=@ad.phone%>
-      </p>
+       
       <%=link_to 'voir', ad_path(@ad.id), class: 'btn-lg btn-primary-css'%>
     
        </div>

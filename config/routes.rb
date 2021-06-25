@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :avatars, only: [:create]
   end
-  resources :ads, only: [:index, :new, :create, :edit, :show, :delete, :benevole, :demandeur]
+  resources :ads
   get 'benevoles', to: 'ads#benevoles'
   get 'demandeurs', to: 'ads#demandeurs'
   resources :trainings

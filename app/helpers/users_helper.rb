@@ -13,7 +13,6 @@ module UsersHelper
   def city_list
     [
       ['Paris','paris'],
-      ['Ile-de-france','ile-de-france'],
       ['Lyon','lyon']
     ]
   end
