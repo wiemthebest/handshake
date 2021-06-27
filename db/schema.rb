@@ -83,6 +83,16 @@ ActiveRecord::Schema.define(version: 2021_06_23_233623) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.bigint "sender_id"
+    t.bigint "receiver_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receiver_id"], name: "index_messages_on_receiver_id"
+    t.index ["sender_id"], name: "index_messages_on_sender_id"
+  end
+
   create_table "participations", force: :cascade do |t|
     t.string "status"
     t.integer "user_id"
@@ -116,4 +126,6 @@ ActiveRecord::Schema.define(version: 2021_06_23_233623) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "messages", "users", column: "receiver_id"
+  add_foreign_key "messages", "users", column: "sender_id"
 end

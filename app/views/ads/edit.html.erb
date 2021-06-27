@@ -22,7 +22,7 @@
       <%=text_field_tag 'zip_code', @ad.zip_code, class: "form-control"%>
     </div>
      <div class="form-group">
-        <label class="h3">City</label>
+        <label class="h3">Ville</label>
          <%=select_tag 'city', options_for_select(city_list, @ad.city), class: "form-control"%>
     </div>
     <div class="form-group mb-3">
@@ -34,7 +34,7 @@
       <%=text_field_tag 'phone', @ad.phone, class: "form-control"%>
     </div>
     <div class="form-group d-flex">
-       <%= submit_tag "Valider", class: "btn btn-primary mt-4"%>
+       <%= submit_tag "Valider", class: "btn btn-primary-css mt-4"%>
       
     </div>
   <%end%>

@@ -4,7 +4,7 @@
     <title>Handshake</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,15 +20,17 @@
     </header>
     <!--end of the header with the header element for TTS-->
 
+  <div class="content">
+
+    <% if notice %><div class="alert alert-primary"><%= notice %></div> <% end %>
+
     <!-- each page -->
     <%= yield %>
     <!-- each page -->
-
+  </div>
 
     <!-- footer with the footer attribute for TTS-->
-    <footer>
     <%= render 'layouts/footer'%>
-    </footer>
     <!-- footer with the footer attribute for TTS-->
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

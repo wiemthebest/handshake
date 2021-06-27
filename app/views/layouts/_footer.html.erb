@@ -1,51 +1,36 @@
 <!-- Footer -->
-<footer class="bg-primary text-white">
-    <!-- Grid container -->
+<footer class="bg-primary-css footer-content text-white">
+    <div class="footer-content"
+   <!--grid container-->
     <div class="container p-3">
         <section class="">
             <!--Grid row-->
             <div class="row">
                 <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-6 col-md-8 mb-6 mb-md-2">
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <%= link_to "Politique de Confidentialité", "#" , class:"text-white"%>                        </li>
+                            <%= link_to "Accueil", root_path , class:"text-white"%>                        
                         </li>
                         <li>
-                            <%= link_to "CGU", "#" , class:"text-white"%>                       
-                        </li>
+                            <%= link_to "Contact", new_contact_path , class:"text-white"%>      
                         <li>
-                            <%= link_to "Ressources et formations", "#" , class:"text-white"%>                        </li>
-                        </li>
+                            <%= link_to "Ressources et formations", new_training_path, class:"text-white"%>                        </li>
+                        </li>   
                     </ul>
                 </div>
                 <!--Grid column-->
                 <!--Grid column-->
-                <div class="col-lg-3 col-md-3 mb-4 mb-md-0">
-                    <ul class="list-unstyled mb-0 ml-4 text-center">
-                        <li>
-                            <%= link_to "Accueil", "#" , class:"text-white"%>                        
-                        </li>
-                        <li>
-                            <%= link_to "Contact", "#" , class:"text-white"%>                       
-                        </li>
-                        <li>
-                            <%= link_to "A propos", "#" , class:"text-white"%>                       
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-5 col-md-8 mb-6 mb-md-2">
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <%= link_to "Je propose mon aide", "#" , class:"text-white"%>                        </li>
+                            <%= link_to "Je propose mon aide", benevoles_path , class:"text-white"%>                        </li>
                         </li>
                         <li>
-                            <%= link_to "Je recherche un bénévole", "#" , class:"text-white"%>                        </li>
+                            <%= link_to "Je recherche un bénévole", demandeurs_path , class:"text-white"%>                        </li>
                         </li>
                         <li>
-                            <%= link_to "Annonces", "#" , class:"text-white"%>                        </li>
+                            <%= link_to "Annonces", ads_path , class:"text-white"%>                        </li>
                         </li>
                     </ul>
                 </div>
@@ -60,8 +45,9 @@
     <!-- Copyright -->
     <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2021 Copyright:
-        <%= link_to "HANDSHAKE", "#" , class:"text-white"%>
+        <%= link_to "HANDSHAKE", root_path , class:"text-white"%>
     </div>
+</div>
     <!-- Copyright -->
     </footer>
     <!-- Footer -->
