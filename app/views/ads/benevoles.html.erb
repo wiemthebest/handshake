@@ -18,8 +18,9 @@
 					</div>
 				</form>
 </div>
-
-<%=link_to 'Créer une annonce', new_ad_path, class: 'btn-lg btn-primary'%>
+<div class="d-grid gap-2 col-6 mx-auto">
+	<%=link_to 'Créer une annonce', new_ad_path, class: 'btn btn-lg btn-primary btn-block btn-primary-css'%>
+</div>
   <div class="row justify-content-center">
     <%@ads.each do |e|%>
       <div class="col-sm-12 col-lg-4">
