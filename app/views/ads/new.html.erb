@@ -30,32 +30,32 @@
 
     <div class="form-group mt-4">
       <h3>
-        <%= label_tag 'adress' %>
+        <%= label_tag 'Adresse' %>
       </h3>
       <%= text_field_tag 'adress','', require: true, class: "form-control"%>
     </div>
 
     <div class="form-group mt-4">
       <h3>
-        <%= label_tag 'zip code' %>
+        <%= label_tag 'Code postal' %>
       </h3>
       <%= text_field_tag 'zip_code','', require: true, class: "form-control"%>
     </div>
 
      <div class="form-group mt-4">
         <h3>
-        <%= label_tag 'city' %>
+        <%= label_tag 'Ville' %>
       </h3>
          <%=select_tag 'city', options_for_select(city_list), class: "form-control"%>
     </div>
     <div class="form-group mt-4">
       <h3>
-        <%= label_tag 'phone' %>
+        <%= label_tag 'Téléphone' %>
       </h3>
       <%= text_field_tag 'phone','', require: true, class: "form-control"%>
     </div>
     
-    <%= submit_tag "Créer", class: "btn btn-primary mt-4"%>
+    <%= submit_tag "Créer", class: "btn btn-primary-css mt-4"%>
     
   <%end%>
 

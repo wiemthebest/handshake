@@ -1,0 +1,11 @@
+<div class="col-md-7 mb-5 mb-md-0">
+    <h4 class="text-primary">Formulaire de contact</h4><br>
+    <%= simple_form_for @contact, :url=> url_for(action: 'create'),
+      method: :post do |f| %>
+      <%= f.input :first_name, class:"form-control m-3 text-color-black" %>
+      <%= f.input :last_name, class:"form-control m-3 text-color-black" %>
+      <%= f.input :email, class:"form-control m-3 text-color-black" %>
+      <%= f.input :message, class:"form-control m-3 text-color-black" %>
+      <%= f.button :submit, 'Envoyer' , class:'btn btn-success' %>
+      <% end %>
+</div>

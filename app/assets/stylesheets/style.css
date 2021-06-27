@@ -1,6 +1,85 @@
+@media (min-width: 768px) {
+    .content>.container {
+        min-height: 800px;
+        padding-bottom: 20px;
+    }
+}
+
 .img-center {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 25rem;
+}
+
+@media (max-width: 500px) {
+    .resmargin {
+        margin: 0;
+    }
+}
+
+.font-correction {
+    font-size: 1em;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    display: flex !important;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bd-placeholder-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.category-cards h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.background {
+    background-color: #fffdfd;
+}
+
+.text-color-white {
+    color: #fff !important;
+}
+
+.shadowing {
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 1) !important;
+}
+
+.fix-sign {
+    justify-content: flex-end;
+}
+
+.text-color-black {
+    color: #000 !important;
+}
+
+.zipcode-container {
+    width: 1000px !important;
+}
+
+.btn-info-css {
+    color: #000;
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+
+.btn-outline-info-css {
+    color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+
+.bg-primary-css {
+    background-color: #113357 !important;
+}
+
+.btn-primary-css {
+    color: #fff !important;
+    background-color: #113357 !important;
+    border-color: #113357 !important;
 }
