@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/hd-admin', as: 'rails_admin'
 
   root 'static_pages#index'
   resources :messages, only: [:index, :create, :conversations]
