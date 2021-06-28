@@ -22,7 +22,7 @@ class User < ApplicationRecord
     [address, city, zip_code, "france"].compact.join(', ')
   end      
 
-  scope :admin, -> { where(admin: true) }
+  scope :admin, -> {where(admin: true)}
 
   def friends
     friends = Message.where(sender: self).map { |message| message.receiver} + Message.where(receiver: self).map { |message| message.sender}
