@@ -16,7 +16,7 @@ def index
     @city = ''
   end
   #order by geoloc
-  @ads = @ads.sort{|a,b| sorting(a,b)}
+  #@ads = @ads.sort{|a,b| sorting(a,b)}
 end
 
 def benevoles
@@ -33,7 +33,7 @@ def benevoles
     @city = ''
   end
   #order by geoloc
-  @ads = @ads.sort{|a,b| sorting(a,b)}
+  #@ads = @ads.sort{|a,b| sorting(a,b)}
 end
 
 def demandeurs
@@ -50,7 +50,7 @@ def demandeurs
     @city = ''
   end
   #order by geoloc
-  @ads = @ads.sort{|a,b| sorting(a,b)}
+  #@ads = @ads.sort{|a,b| sorting(a,b)}
 end
 
 
