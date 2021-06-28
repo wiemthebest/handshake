@@ -1,12 +1,12 @@
-<div class="container text-center">
+<div class="container text-center py-5 py-lg-7">
   <h2 class="p-4"> <%= @user.first_name %> <%= @user.last_name %> </h2>
 
   <p><b>Email:</b> <%= @user.email %></p>
   
 
 
-  <%= link_to "Edit your email and password", edit_user_registration_path, class: "btn btn-warning mx-2 my-2 " %>
-  <%= link_to "Edit your personal informations", edit_user_path(current_user), class: "btn btn-warning mx-2 my-2" %>
+  <%= link_to "Editer votre email et mot de passe", edit_user_registration_path, class: "btn btn-warning mx-2 my-2 " %>
+  <%= link_to "Editer vos informations personnelles", edit_user_path(current_user), class: "btn btn-warning mx-2 my-2" %>
   <br>
 
   <h5 class="p-4"> Vous avez crée les annonces suivantes :</h5>
